@@ -1,0 +1,163 @@
+:root {
+    --primary: #b8892e;
+    --secondary: #f4efe6;
+    --dark: #1f1f1f;
+    --muted: #777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    background: #fdfdfd;
+    color: var(--dark);
+}
+
+/* ===== HEADER / NAV ===== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.brand span {
+    color: var(--primary)
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--dark)
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.7rem;
+    cursor: pointer
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    padding: 2rem;
+    transition: .4s;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, .15);
+    z-index: 200;
+}
+
+.sidebar.active {
+    right: 0
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.sidebar li {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+
+.sidebar-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+    background: var(--secondary);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+}
+
+/* ===== FLOATING ICONS ===== */
+/* Back to top */
+#backToTop {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 999;
+}
+
+/* Show button */
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+    z-index: 999;
+}
